@@ -35,8 +35,17 @@ class ViewController: UIViewController
 
     @IBAction func spinButton_Clicked(_ sender: UIButton)
     {
-        spinReels()
+        print(spinReels())
         determineWinnings()
+        
+        grapes = 0
+        bananas = 0
+        oranges = 0
+        cherries = 0
+        bars = 0
+        bells = 0
+        sevens = 0
+        blanks = 0
     }
     
     @IBAction func bet5Button_Clicked(_ sender: UIButton)
@@ -180,15 +189,16 @@ class ViewController: UIViewController
                  winnings =  playerBet * 1
             }
             print("Win!!!!!")
+            print("winnings: " + String(winnings))
         }
         else
         {
             print("Loss!!!!!!")
         }
 
-         result_Text.text =  String(winnings)
-         playerMoney +=  winnings
-         credit_Text.text =  String(playerMoney)
+        
+        // playerMoney +=  winnings
+        // credit_Text.text =  String(playerMoney)
     }
     
     //PRIVATE METHODS
